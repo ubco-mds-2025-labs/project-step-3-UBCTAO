@@ -220,3 +220,109 @@ Functions:
   `income.entry` and `expense.entry` so the validation logic is shared.
 
 
+## 4. Installation (PyPI)
+
+The package is officially published on PyPI:
+
+**[https://pypi.org/project/budgetmaster-mds533-ubctao/0.1.0/](https://pypi.org/project/budgetmaster-mds533-ubctao/0.1.0/)**
+
+### Install with:
+
+```bash
+pip install budgetmaster-mds533-ubctao
+```
+
+### Import example:
+
+```python
+import budgetmaster
+from budgetmaster.income.entry import add_income
+from budgetmaster.expense.entry import add_expense
+from budgetmaster.analysis.reports import monthly_balance
+```
+
+
+## 5. Project Structure
+
+```
+project-step-3-UBCTAO/
+│
+├── budgetmaster/
+│   ├── income/
+│   │   ├── __init__.py
+│   │   ├── entry.py
+│   │   └── summary.py
+│   │
+│   ├── expense/
+│   │   ├── __init__.py
+│   │   ├── base_transaction.py   # Base class (inheritance requirement)
+│   │   └── entry.py              # Expense inherits BaseTransaction
+│   │
+│   └── analysis/
+│       ├── __init__.py
+│       ├── reports.py
+│       └── utils.py
+│
+├── tests/
+│   ├── test_income_entry.py
+│   ├── test_income_summary.py
+│   ├── test_expense_entry.py
+│   ├── test_expense_base_transaction.py
+│   ├── test_analysis_utils.py
+│   └── test_analysis_reports.py
+│
+├── pyproject.toml               # required for PyPI packaging
+├── README.md
+└── .github/workflows/main.yml   # CI workflow
+```
+
+
+## 6. GitHub Actions (CI)
+
+We configured automated testing using GitHub Actions.
+Every push or pull request to `main` triggers:
+
+* Setup of Python 3.11
+* Installation of dependencies
+* Running all unit tests under `tests/`
+* Generating coverage report
+
+The CI workflow file is located at:
+
+```
+.github/workflows/main.yml
+```
+
+### CI status:
+
+* All tests pass successfully
+* CI is fully functional
+* Meets project requirements
+
+
+
+## 7. Test Coverage Summary
+
+We executed:
+
+```bash
+coverage run -m unittest discover -s tests -p "test_*.py"
+coverage report -m
+```
+
+### Results:
+
+* All project modules are tested
+* Test coverage meets requirements (≥75%)
+* Plotting functions (matplotlib) naturally have lower coverage and are excluded from logic tests
+* Coverage report is included in the repository
+
+
+
+## 8. Demo Video
+
+**The video is submitted on Canvas as required.**
+
+
+
+
