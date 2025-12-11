@@ -1,20 +1,26 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "budgetmaster-tao"
+name = "budgetmaster-mds533-ubctao"
 version = "0.1.0"
-description = "A simple budgeting package for managing income, expenses, and analysis."
-authors = [
-  { name="Tao Wang", email="your_email@example.com" }
-]
+description = "BudgetMaster: a simple household budgeting package for the DATA533 project."
 readme = "README.md"
-requires-python = ">=3.9"
-license = {text = "MIT"}
+requires-python = ">=3.10"
+license = { text = "MIT" }
 
-dependencies = []
+authors = [
+  { name = "Tao Wang" },
+  { name = "Haozhong Ji" }
+]
+
+dependencies = [
+  "matplotlib>=3.5"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ubco-mds-2025-labs/project-step-3-UBCTAO"
 
 [tool.setuptools.packages.find]
-where = ["."]
 include = ["budgetmaster*"]
