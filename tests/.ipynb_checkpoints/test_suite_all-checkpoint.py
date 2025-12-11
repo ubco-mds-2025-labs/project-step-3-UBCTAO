@@ -1,13 +1,12 @@
 # This file collects all the test classes for project step 2 into one test suite.
 import unittest
 
-from tests_project_step2.test_income_entry import TestIncomeEntry
-from tests_project_step2.test_income_summary import TestIncomeSummary
-from tests_project_step2.test_expense_entry import TestExpenseEntry
-from tests_project_step2.test_analysis_reports import TestAnalysisReports
-from tests_project_step2.test_expense_base_transaction import TestBaseTransaction
-from tests_project_step2.test_analysis_utils import TestAnalysisUtils
-
+from test_income_entry import TestIncomeEntry
+from test_income_summary import TestIncomeSummary
+from test_expense_entry import TestExpenseEntry
+from test_analysis_reports import TestAnalysisReports
+from test_expense_base_transaction import TestBaseTransaction
+from test_analysis_utils import TestAnalysisUtils
 
 def suite():
     """Collect all test classes into one suite."""
